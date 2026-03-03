@@ -63,11 +63,29 @@
             gap: 10px;
         }
 
+        /* Ajuste do tamanho da imagem da logo no menu */
+        .logo img {
+            height: 50px; /* Você pode aumentar ou diminuir esse valor se achar necessário */
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05); /* Dá um leve efeito de zoom ao passar o mouse */
+        }
+
         .logo span { color: var(--sky-blue); }
 
         .nav-links {
             display: flex;
             gap: 20px;
+            align-items: center; /* Essa é a linha mágica que alinha tudo pelo meio */
+        }
+
+        .nav-links li {
+            display: flex;
+            align-items: center;
         }
 
         .nav-links a {
@@ -270,9 +288,10 @@
 <body>
 
     <nav>
-        <div class="logo">
-            <i class="fas fa-project-diagram" style="color: var(--sky-blue);"></i> JHG<span>.</span>
-        </div>
+        <a href="#" class="logo">
+            <img src="logo.png" alt="Logo JHG Consultoria">
+        </a>
+        
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
