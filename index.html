@@ -65,10 +65,11 @@
 
         /* Ajuste do tamanho da imagem da logo no menu */
         .logo img {
-            height: 50px; /* Você pode aumentar ou diminuir esse valor se achar necessário */
+            height: 85px; /* Aumentamos de 50px para 85px. Pode testar até 100px se quiser maior */
             width: auto;
             object-fit: contain;
             transition: transform 0.3s ease;
+            mix-blend-mode: multiply; /* Ajuda a remover possíveis fundos brancos da imagem, mesclando com o fundo do menu */
         }
 
         .logo img:hover {
